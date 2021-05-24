@@ -23,3 +23,5 @@ Route::get('/home', 'HomeController@index')->name('home');
 
 Route::get('/team', 'TeamController@index')->name('team.index');
 
+Route::get('/chat', 'Chat@index')->name('team.index');
+

@@ -41,6 +41,7 @@ class TeamController extends Controller
         return view('team.index', [
             'name' => $name,
             'team_name' => $team_name,
+            'mode' => 'team',
             'members' => $members,
             // 'team' => $team
         ]);

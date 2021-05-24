@@ -38,11 +38,4 @@ class LoginController extends Controller
         $this->middleware('guest')->except('logout');
     }
 
-    /**
- * @return string
- */
-public function redirectTo() : string
-{
-    return '/team';
-}
 }

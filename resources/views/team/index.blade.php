@@ -20,12 +20,13 @@
     <body class="antialiased">
 
         @extends('layouts.dashboard')
-            
-        @if(Route::current()->getName() == 'team.index')
+
+        @if (Route::currentRouteAction() == 'App\Http\Controllers\Chat@index')
+           @extends('team.tabs.chats')
+        @elseif (Route::currentRouteAction() == 'App\Http\Controllers\TeamController@index')
             @extends('team.tabs.chats')
-        @else
-            <h1>Chats Dapat diri</h1>
         @endif
-        
+
+
     </body>
 </html>
