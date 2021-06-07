@@ -1,5 +1,7 @@
 @section('content')
-    <div class="container-fluid">
+   
+
+<div class="container-fluid">
         <div class="row">
 
             <div class="col-lg-3 bg-dark-100 p-4" style="height: 100vh">
@@ -26,8 +28,8 @@
                     </div>
 
                     <div class="d-flex">
-                            <input type="text" class="form-control mr-4" name="message" placeholder="Type Message Here..." required>
-                            <button class="btn bg-secondary"><i class="fa fa-telegram mr-2" aria-hidden="true"></i> Send</button>
+                            <input type="text" id="message" class="form-control mr-4" name="message" placeholder="Type Message Here..." required>
+                            <button class="btn bg-secondary" id="send-message"><i class="fa fa-telegram mr-2" aria-hidden="true"></i> Send</button>
                     </div>
 
                 </div>

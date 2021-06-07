@@ -18,14 +18,13 @@
 
 
     <nav :class="{'block': open, 'hidden': !open}" class="flex-grow md:block px-3 pb-4 md:pb-0 md:overflow-y-auto">
-      <p class="px-2 radius-10 white"><i class="fa fa-calendar-plus-o mr-2" aria-hidden="true"></i> Calendar</p>
+    <a href="{{ url('/team') }}">
+          <p class="{{ $tab == 'team' ? 'bg-primary dark font-weight-bold' : 'white inactive' }} px-2 py-2 radius-15" >
+              <i class="fa fa-users mr-2" aria-hidden="true"></i> Team</p></a>
       
       <a href="{{ url('/chat') }}">
-      <p class="{{ $mode == 'chat' ? 'bg-primary dark font-weight-bold' : 'white' }} px-2 py-2 radius-15"><i class="fa fa-telegram mr-2" aria-hidden="true"></i> Chat</p></a>
+      <p class="{{ $tab == 'chats' ? 'bg-primary dark font-weight-bold' : 'white inactive' }} px-2 py-2 radius-15"><i class="fa fa-telegram mr-2" aria-hidden="true"></i> Chat</p></a>
       
-      <a href="{{ url('/team') }}">
-          <p class="{{ $mode == 'team' ? 'bg-primary dark font-weight-bold' : 'white' }} px-2 py-2 radius-15" >
-              <i class="fa fa-users mr-2" aria-hidden="true"></i> Team</p></a>
     </nav>
 
 

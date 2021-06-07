@@ -15,8 +15,11 @@
 
                     {{ __('') }}
 
-                    <div class="d-flex align-items-center justify-content-between">
+                    <div class="d-flex justify-content-between">
+                        <div>
                         <h4>Welcome, {{$name}}</h4>
+                        <p>Thank you for signing in!</p>
+                        </div>
                         <a href="http://127.0.0.1:8000/team">
                             <button class="btn btn-warning font-weight-bold">Visit Team</button>
                         </a>

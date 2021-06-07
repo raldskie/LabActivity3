@@ -29,6 +29,8 @@ class TeamController extends Controller
             $model_role = DB::select('select * from model_has_roles where model_id='.$members[$i]->id);
             $role = DB::select('select * from roles where id='.$model_role[0]->role_id);
 
+            $members[$i]->created_at = \Carbon\Carbon::parse($members[$i]->created_at)->format('d M Y');
+
             if($role[0]->name == "team_lead"){
                 $members[$i]->role = "Team Lead";
             }
@@ -37,11 +39,12 @@ class TeamController extends Controller
             }
             $i++;
         }
-        
+
         return view('team.index', [
             'name' => $name,
             'team_name' => $team_name,
-            'mode' => 'team',
+            'tab' => 'team',
+            'mode' => 'team.tabs.team',
             'members' => $members,
             // 'team' => $team
         ]);

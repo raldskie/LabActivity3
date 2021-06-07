@@ -14,7 +14,7 @@ class UserSeeder extends Seeder
     public function run()
     {
         $team = factory(Teams::class)->create([
-            'name' => 'CodeTisans'
+            'name' => 'ApplTree'
         ]);
 
 
@@ -22,16 +22,24 @@ class UserSeeder extends Seeder
                 'name' => 'Almae',
                 'last_name' => 'Hangad',
                 'team_id' => $team->id,
-                'email' => 'test@example.com'
+                'email' => 'almae@example.com'
         ]);
         $user->assignRole('team_lead');
 
         
         $user = factory(User::class)->create([
             'name' => 'IJ',
-            'last_name' => 'Patrick',
+            'last_name' => 'Enot',
             'team_id' => $team->id,
-            'email' => 'test117@example.com'
+            'email' => 'ij@example.com'
+        ]);
+        $user->assignRole('user');
+
+        $user = factory(User::class)->create([
+            'name' => 'Gerald',
+            'last_name' => 'Dayak',
+            'team_id' => $team->id,
+            'email' => 'gerald@example.com'
         ]);
         $user->assignRole('user');
 

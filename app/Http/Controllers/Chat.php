@@ -18,7 +18,8 @@ class Chat extends Controller
         return view('team.index',[
             'name' => $name,
             'team_name' => $team_name,
-            'mode' => 'chat'
+            'tab' => 'chats',
+            'mode' => 'team.tabs.chats'
         ]);
     }
 }

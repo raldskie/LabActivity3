@@ -62,8 +62,7 @@ class User extends Authenticatable
     }
 
     public function createdAt(){
-        return $this->created_at->format(
-            config('workkit.date_format')
+        return $this->created_at->format('d. m. Y'
         );
     }
 }
